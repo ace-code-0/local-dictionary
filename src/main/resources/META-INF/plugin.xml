@@ -13,6 +13,7 @@
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
+        <applicationService serviceImplementation="com.github.acecode0.localdictionary.hover.DictionaryHoverService"/>
         <toolWindow factoryClass="com.github.acecode0.localdictionary.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
         <postStartupActivity implementation="com.github.acecode0.localdictionary.startup.MyProjectActivity" />
     </extensions>
