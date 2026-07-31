@@ -11,6 +11,6 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.acecode0.localdictionary.hover.DictionaryHoverService"/>
+        <applicationService serviceImplementation="com.github.acecode0.localdictionary.hover.DictionaryHoverService" preload="true"/>
     </extensions>
 </idea-plugin>
