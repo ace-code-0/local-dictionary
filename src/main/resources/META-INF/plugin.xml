@@ -12,5 +12,7 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <applicationService serviceImplementation="com.github.acecode0.localdictionary.hover.DictionaryHoverService" preload="true"/>
+        <applicationService serviceImplementation="com.github.acecode0.localdictionary.status.DictionaryStatus" preload="true"/>
+        <statusBarWidgetFactory implementation="com.github.acecode0.localdictionary.status.LocalDictionaryStatusBarWidgetFactory"/>
     </extensions>
 </idea-plugin>

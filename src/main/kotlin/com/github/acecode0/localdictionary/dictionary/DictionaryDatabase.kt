@@ -11,6 +11,11 @@ import java.sql.Connection
 import java.sql.DriverManager
 
 class DictionaryDatabase(private val databasePath: Path) : AutoCloseable {
+    init {
+        // IntelliJ's plugin classloader may prevent DriverManager from discovering JDBC services.
+        Class.forName("org.sqlite.JDBC")
+    }
+
     private val connection: Connection = DriverManager.getConnection("jdbc:sqlite:${databasePath.toUri()}?mode=ro")
 
     fun lookup(word: String): String? =
